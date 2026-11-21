@@ -1,0 +1,35 @@
+{
+  "folds": 5,
+  "negative_methods": [
+    "random_pairing",
+    "repertoire_background",
+    "hard_q99",
+    "hard_q75",
+    "hard_q50",
+    "hard_q25",
+    "hard_q1"
+  ],
+  "notes": [
+    "The proposal does not name the two published predictors; NetTCR-2.2 and ERGO-II are configurable placeholders in study_config.json.",
+    "Published-paper metrics are reported separately and are not treated as measurements on this study's held-out folds.",
+    "Configure predictor commands as argument arrays using {train}, {test}, and {output}; predictor output must be a TSV with pair_id and score."
+  ],
+  "part": "jacob",
+  "predictors": [
+    "NetTCR-2.2",
+    "ERGO-II"
+  ],
+  "processed_manifest": "/Users/dhar/Documents/Academic/Comp Biology/Project/data/processed/manifest.json",
+  "seeds": [
+    13,
+    29,
+    47,
+    71,
+    101
+  ],
+  "test_inputs_omit_labels": true,
+  "timebox_seconds_per_predictor": {
+    "ERGO-II": 3600,
+    "NetTCR-2.2": 3600
+  }
+}

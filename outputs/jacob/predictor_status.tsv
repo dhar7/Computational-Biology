@@ -1,0 +1,3 @@
+predictor	fold	seed	method	status	details
+NetTCR-2.2				not_configured	Add a command adapter to study_config.json or provide published fallback numbers.
+ERGO-II				not_configured	Add a command adapter to study_config.json or provide published fallback numbers.

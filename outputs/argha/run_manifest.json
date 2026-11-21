@@ -1,0 +1,22 @@
+{
+  "bootstrap_replicates": 1000,
+  "controls": [
+    "full",
+    "peptide_only",
+    "mhc_only",
+    "tcr_blind"
+  ],
+  "folds": 5,
+  "label_permutations": 1000,
+  "negative_method": "repertoire_background",
+  "negative_pair_sampling": "Candidate TCRs are sampled without replacement per positive when possible; reused biological pairs have distinct draw-level pair_id values and are counted in each metrics row.",
+  "part": "argha",
+  "processed_manifest": "/Users/dhar/Documents/Academic/Comp Biology/Project/data/processed/manifest.json",
+  "seeds": [
+    13,
+    29,
+    47,
+    71,
+    101
+  ]
+}

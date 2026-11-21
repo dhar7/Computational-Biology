@@ -1,0 +1,65 @@
+{
+  "created_unix": 1795223927.3927429,
+  "expected_source_count_check": {
+    "IEDB": {
+      "expected_raw_rows": 9652,
+      "matches": true,
+      "observed_raw_rows": 9652
+    },
+    "VDJdb": {
+      "expected_raw_rows": 30274,
+      "matches": true,
+      "observed_raw_rows": 30274
+    }
+  },
+  "fold_seed": 1601,
+  "folds": 5,
+  "leakage_checks": {
+    "known_positive_tcrs_in_background_repertoire": 0,
+    "peptide_grouped": true,
+    "peptides_crossing_folds": 0
+  },
+  "notes": [
+    "Expected source counts are reported, not enforced, because source tables may already be filtered or deduplicated.",
+    "TCR and peptide sequences are uppercased and whitespace is removed; CDR3 anchor residues are retained."
+  ],
+  "positive_rows_per_fold": {
+    "0": 1800,
+    "1": 1800,
+    "2": 1799,
+    "3": 2133,
+    "4": 1799
+  },
+  "positive_source_counts": {
+    "IEDB": 4989,
+    "VDJdb": 6481
+  },
+  "proposal": "TCR-pMHC negative construction study",
+  "raw_positive_source_counts": {
+    "IEDB": 9652,
+    "VDJdb": 30274
+  },
+  "raw_rows": {
+    "positives": 39926,
+    "repertoire": 5287
+  },
+  "rejected_or_collapsed_rows": {
+    "duplicate_positive_pair": 4437,
+    "repertoire_rows_overlapping_any_positive_tcr": 29,
+    "unsupported_or_invalid_hla": 26158
+  },
+  "retained_rows": {
+    "background_repertoire_rows": 5258,
+    "positives": 9331,
+    "unique_background_tcr_sequences": 5258
+  },
+  "source_files": {
+    "positives": "/Users/dhar/Documents/Academic/Comp Biology/Project/data/positives.tsv",
+    "repertoire": "/Users/dhar/Documents/Academic/Comp Biology/Project/data/repertoire.tsv"
+  },
+  "target_alleles": [
+    "HLA-A*02:01",
+    "HLA-B*40:01"
+  ],
+  "unique_peptides": 868
+}
