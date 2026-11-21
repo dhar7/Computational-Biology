@@ -1,0 +1,52 @@
+{
+  "prepared_utc": "2026-11-21T01:13:08.995583+00:00",
+  "positives": {
+    "origin": "Public mirror of the IMMREP25 competition training CSVs",
+    "official_competition": "https://www.kaggle.com/competitions/immrep25",
+    "mirror_repository": "https://github.com/Ajaingithub/pMHC_TCR_specificity",
+    "raw_files": {
+      "IEDB": {
+        "path": "data/raw/immrep25/iedb_positives.csv",
+        "rows": 9652,
+        "sha256": "ed50098bb63e02079a3796b9d5847f18a024e9e267f8afdf05558a2951e070dc",
+        "cdr3_beta_column_used": "CDR3b_extended"
+      },
+      "VDJdb": {
+        "path": "data/raw/immrep25/vdjdb_positives.csv",
+        "rows": 30274,
+        "sha256": "ef58bec6f2c7bad83699df4604fcd2959bbd7d6a2330ba5da72311cc2a3557b9",
+        "cdr3_beta_column_used": "CDR3b"
+      }
+    },
+    "canonical_rows_written": 39926,
+    "target_hla_positive_rows_before_farhan_filtering": 13768,
+    "target_hla_unique_peptides_before_farhan_filtering": 868,
+    "target_hla_unique_tcr_beta_sequences": 8680
+  },
+  "repertoire": {
+    "origin": "10x Genomics Human PBMC from a Healthy Donor, 10k cells (v2), one donor",
+    "url": "https://cf.10xgenomics.com/samples/cell-vdj/5.0.0/sc5p_v2_hs_PBMC_10k_multi_5gex_5fb_b_t/sc5p_v2_hs_PBMC_10k_multi_5gex_5fb_b_t_vdj_t_all_contig_annotations.csv",
+    "dataset_page": "https://www.10xgenomics.com/datasets/human-pbmc-from-a-healthy-donor-10-k-cells-v-2-2-standard-5-0-0",
+    "license": "CC BY 4.0",
+    "raw_path": "data/raw/10x/tcr_all_contig_annotations.csv",
+    "raw_sha256": "305069d87a2713a5b30d336a4a387051ee2746eb2a81b975a703bf1e610da9d1",
+    "raw_contig_rows": 15377,
+    "rows_after_cell_confidence_productivity_and_trb_filters": 5416,
+    "unique_canonical_cdr3_beta_sequences_written": 5287,
+    "known_positive_cdr3_beta_sequences_overlapping_repertoire": 29,
+    "filters": [
+      "chain=TRB",
+      "productive=true",
+      "high_confidence=true",
+      "is_cell=true",
+      "canonical amino acids",
+      "unique CDR3 beta"
+    ]
+  },
+  "notes": [
+    "The two IMMREP25 training CSVs have the proposal's stated row counts.",
+    "The public mirror is used because Kaggle credentials and competition acceptance are not configured on this machine.",
+    "The Farhan step filters positives to the two target HLA alleles, deduplicates pairs, and removes known positive TCRs from the repertoire.",
+    "The repertoire is from one healthy donor; record this limitation when interpreting results."
+  ]
+}
