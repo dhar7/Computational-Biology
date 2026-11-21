@@ -1,0 +1,77 @@
+{
+  "data": {
+    "positives_path": "data/positives.tsv",
+    "repertoire_path": "data/repertoire.tsv",
+    "processed_dir": "data/processed",
+    "delimiter": "\t",
+    "target_alleles": ["HLA-A*02:01", "HLA-B*40:01"],
+    "positive_columns": {
+      "tcr_beta": "tcr_beta",
+      "peptide": "peptide",
+      "hla": "hla",
+      "source": "source"
+    },
+    "repertoire_columns": {
+      "tcr_beta": "tcr_beta",
+      "hla": "hla"
+    },
+    "folds": 5,
+    "fold_seed": 1601,
+    "expected_source_counts": {
+      "IEDB": 9652,
+      "VDJdb": 30274
+    }
+  },
+  "experiment": {
+    "seeds": [13, 29, 47, 71, 101],
+    "negatives_per_positive": 5,
+    "hardness_percentiles": [99, 75, 50, 25, 1],
+    "hardness_candidate_cap": 25000,
+    "label_permutations": 1000,
+    "bootstrap_replicates": 1000,
+    "structure_sample_size": 200,
+    "run_robustness": true,
+    "save_pair_predictions": false
+  },
+  "model": {
+    "encoder_name": "facebook/esm2_t6_8M_UR50D",
+    "device": "auto",
+    "batch_size": 32,
+    "max_length": 512,
+    "hidden_dim": 128,
+    "dropout": 0.2,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "epochs": 10,
+    "train_batch_size": 256,
+    "num_workers": 0,
+    "gradient_boosting_features": 256,
+    "gradient_boosting_iterations": 100
+  },
+  "predictors": [
+    {
+      "name": "NetTCR-2.2",
+      "command": [],
+      "timeout_seconds": 3600,
+      "published_fallback": null
+    },
+    {
+      "name": "ERGO-II",
+      "command": [],
+      "timeout_seconds": 3600,
+      "published_fallback": null
+    }
+  ],
+  "structure_predictor": {
+    "command": [],
+    "timeout_seconds": 7200,
+    "plausibility_threshold": 0.5
+  },
+  "output_dir": "outputs",
+  "progress_initial_estimates_minutes": {
+    "farhan": 10,
+    "argha": 120,
+    "jacob": 120,
+    "aditi": 240
+  }
+}
